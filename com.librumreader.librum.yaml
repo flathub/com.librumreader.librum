@@ -7,10 +7,8 @@ sdk: org.kde.Sdk
 command: librum
 finish-args:
   - --share=ipc
-  - --share=network
   - --socket=wayland
   - --socket=fallback-x11
-  - --filesystem=home
   - --device=dri
 rename-desktop-file: librum.desktop
 rename-icon: logo
