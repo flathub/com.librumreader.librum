@@ -25,7 +25,7 @@ modules:
     sources:
         - type: git
           url: https://github.com/Librum-Reader/Librum.git
-          commit: dae82fd08d7b115a407f78417d0f1a8a0383ac0c
+          commit: 87849f5954e5e0c0f032121ac76fec85fa2c8b4a
     post-install:
       - install -Dm644 librum.desktop -t /app/share/applications
       - install -Dm644 com.librumreader.librum.metainfo.xml -t /app/share/metainfo
