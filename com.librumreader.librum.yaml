@@ -1,10 +1,13 @@
 app-id: com.librumreader.librum
 runtime: org.kde.Platform
-runtime-version: '6.5'
+runtime-version: '6.9'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm16
+  - org.freedesktop.Sdk.Extension.llvm18
 sdk: org.kde.Sdk
 command: librum
+build-options:
+  append-path: /usr/lib/sdk/llvm18/bin
+  prepend-ld-library-path: /usr/lib/sdk/llvm18/lib
 finish-args:
   - --share=ipc
   - --share=network
@@ -25,6 +28,7 @@ modules:
     sources:
         - type: git
           url: https://github.com/Librum-Reader/Librum.git
+          tag: v.0.12.2
           commit: dab488883f2e61ece757fe03107068b132877a66
     post-install:
       - install -Dm644 librum.desktop -t /app/share/applications
